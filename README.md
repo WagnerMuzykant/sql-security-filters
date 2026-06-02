@@ -1,3 +1,13 @@
+
+
+<img width="480" height="384" alt="the matrix GIF" src="https://github.com/user-attachments/assets/aaa8ff25-c34c-428e-98cf-49b5d141de0e" /><img width="480" height="384" alt="the matrix GIF" src="https://github.com/user-attachments/assets/aaa8ff25-c34c-428e-98cf-49b5d141de0e" />
+
+
+
+
+
+
+
 # 🛡️ Aplicação de Filtros em Consultas SQL para Cibersegurança
 
 Neste projeto de laboratório prático, atuei no cenário de um profissional de segurança cibernética utilizando **SQL (Structured Query Language)** para investigar potenciais incidentes e realizar auditorias de equipamentos. 
