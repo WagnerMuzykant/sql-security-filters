@@ -42,4 +42,60 @@ WHERE login_date = '2022-05-09' OR login_date = '2022-05-08';
 
 > **Lógica aplicada:** A consulta utiliza o operador lógico `OR`. Isso instrui o SQL a retornar qualquer registro cuja data seja exatamente a primeira OU a segunda, permitindo cruzar os dados de ambos os dias na mesma saída.
 
+### 3. Recuperar tentativas de login fora do México
+Após o time determinar que a atividade suspeita não se originou no México, precisei filtrar as tentativas de login originadas no restante do mundo.
+
+```sql
+SELECT *
+FROM log_in_attempts
+WHERE NOT country LIKE 'MEX%';
+```
+<img width="672" height="145" alt="image" src="https://github.com/user-attachments/assets/5b8ed595-0797-4b39-99fd-b474cc37d229" />
+
+> **Lógica aplicada:** Como os registros na coluna país podiam estar escritos como "MEX" ou "MEXICO", combinei o operador `NOT` com o operador `LIKE` e o caractere curinga `%`. O padrão `'MEX%'` engloba tudo que começa com essas letras, e o `NOT` exclui especificamente essas origens dos resultados.
+
+### 4. Recuperar funcionários de Marketing no prédio East
+A equipe de segurança precisava atualizar máquinas em um local específico.
+
+```sql
+SELECT *
+FROM employees
+WHERE department = 'Marketing' AND office LIKE 'East-%';
+```
+<img width="670" height="193" alt="image" src="https://github.com/user-attachments/assets/45b7e193-207e-4178-9c91-61db328076b4" />
+
+> **Lógica aplicada:** Utilizei o operador `AND` para exigir o cumprimento de duas regras: o funcionário deve pertencer ao departamento de 'Marketing', e estar alocado no prédio East. Como o prédio tem várias salas diferentes, utilizei o operador `LIKE` com o padrão `'East-%'` para capturar qualquer número de sala que venha após o prefixo.
+
+### 5. Recuperar funcionários de Finanças ou Vendas
+Para realizar a segunda fase das atualizações de segurança do sistema, precisei identificar as máquinas do pessoal de Vendas e Finanças.
+
+```sql
+SELECT *
+FROM employees
+WHERE department = 'Sales' OR department = 'Finance';
+```
+<img width="672" height="186" alt="image" src="https://github.com/user-attachments/assets/bbf8ea4e-3599-4630-bbf6-9a65796633dd" />
+
+> **Lógica aplicada:** Usando o operador `OR` na mesma coluna de departamento, o banco de dados filtrou e me retornou uma lista consolidada contendo todos os funcionários que pertencem a uma equipe ou a outra.
+
+### 6. Recuperar todos os funcionários que não são de TI
+Para finalizar a rotina de atualizações, foi necessário identificar as máquinas de todos os outros departamentos da empresa, com exceção da equipe de TI, que já havia recebido o patch de segurança.
+
+```sql
+SELECT *
+FROM employees
+WHERE NOT department = 'Information Technology';
+```
+<img width="671" height="173" alt="image" src="https://github.com/user-attachments/assets/d82cd89d-7430-491e-98c9-f4c1aee4ec87" />
+
+> **Lógica aplicada:** Utilizei o operador `NOT` para negar a condição, excluindo especificamente o departamento 'Information Technology' dos resultados retornados pelo banco.
+
+---
+
+## 📝 Resumo e Aprendizados
+
+A execução destas atividades consolida a capacidade de utilizar o SQL como uma ferramenta de resposta a incidentes. Através do cruzamento de cláusulas `WHERE` com operadores lógicos (`AND`, `OR`, `NOT`) e filtros de padrão (`LIKE`, `%`), é possível triar gigabytes de dados de logs em segundos, isolando ameaças ou definindo alvos para manutenção preventiva na infraestrutura corporativa.
+
+
+
 
