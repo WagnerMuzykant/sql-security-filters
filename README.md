@@ -106,6 +106,9 @@ WHERE NOT department = 'Information Technology';
 A execução destas atividades consolida a capacidade de utilizar o SQL como uma ferramenta de resposta a incidentes. Através do cruzamento de cláusulas `WHERE` com operadores lógicos (`AND`, `OR`, `NOT`) e filtros de padrão (`LIKE`, `%`), é possível triar gigabytes de dados de logs em segundos, isolando ameaças ou definindo alvos para manutenção preventiva na infraestrutura corporativa.
 
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/793bdc99-63ac-4ec0-9eb4-0b16ad0915d8">
+</div>
 
-<img width="400" height="166" alt="Reaction GIF by MOODMAN" src="https://github.com/user-attachments/assets/793bdc99-63ac-4ec0-9eb4-0b16ad0915d8" />
+
 
