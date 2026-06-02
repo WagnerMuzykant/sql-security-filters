@@ -108,4 +108,5 @@ A execução destas atividades consolida a capacidade de utilizar o SQL como uma
 
 
 
+<img width="400" height="166" alt="Reaction GIF by MOODMAN" src="https://github.com/user-attachments/assets/793bdc99-63ac-4ec0-9eb4-0b16ad0915d8" />
 
