@@ -54,7 +54,7 @@ WHERE NOT country LIKE 'MEX%';
 
 > **Lógica aplicada:** Como os registros na coluna país podiam estar escritos como "MEX" ou "MEXICO", combinei o operador `NOT` com o operador `LIKE` e o caractere curinga `%`. O padrão `'MEX%'` engloba tudo que começa com essas letras, e o `NOT` exclui especificamente essas origens dos resultados.
 
-### 4. Recuperar funcionários de Marketing no prédio East
+### 4. Recuperar funcionários de Marketing no prédio leste
 A equipe de segurança precisava atualizar máquinas em um local específico.
 
 ```sql
